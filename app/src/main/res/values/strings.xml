@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">ZuAnLanguage</string>
+    <string name="GenarateFragment">GenarateFragment</string>
+    <string name="DataFragment">DataFragment</string>
+    <string name="MineFragment">MineFragment</string>
 </resources>

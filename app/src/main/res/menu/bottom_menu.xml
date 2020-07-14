@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/GenarateFragment"
+        android:icon="@drawable/ic_baseline_casino_24"
+        android:title="@string/GenarateFragment" />
+    <item
+        android:id="@+id/DataFragment"
+        android:icon="@drawable/ic_baseline_dashboard_24"
+        android:title="@string/DataFragment" />
+    <item
+        android:id="@+id/MineFragment"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="@string/MineFragment" />
+</menu>
