@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/GenarateFragment">
 
+    <fragment
+        android:id="@+id/GenarateFragment"
+        android:name="com.example.zuanlanguage.fragment.GenarateFragment"
+        android:label="genarate_fragment"
+        tools:layout="@layout/genarate_fragment" />
+    <fragment
+        android:id="@+id/DataFragment"
+        android:name="com.example.zuanlanguage.fragment.DataFragment"
+        android:label="data_fragment"
+        tools:layout="@layout/data_fragment" />
+    <fragment
+        android:id="@+id/MineFragment"
+        android:name="com.example.zuanlanguage.fragment.MineFragment"
+        android:label="mine_fragment"
+        tools:layout="@layout/mine_fragment" />
 </navigation>
