@@ -6,7 +6,7 @@ import androidx.room.*
 @Dao
 interface LanguageDao {
     @Query("select * from Language")
-    suspend fun fetchAllData(): LiveData<List<Language>>
+    fun fetchAllData(): LiveData<List<Language>>
 
     @Insert
     suspend fun insertData(vararg data: Language)

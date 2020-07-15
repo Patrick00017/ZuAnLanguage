@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "Language")
 data class Language (
     @PrimaryKey(autoGenerate = true)
-    val id: Int,
+    val id: Int?,
     @ColumnInfo(name = "acronym")
     val acronym: String,
     @ColumnInfo(name = "meaning")
