@@ -13,6 +13,12 @@ class DataViewModel : ViewModel() {
 
     public fun fetchAllData(){
         allDataLive = dao?.fetchAllData()
+//        if(allDataLive?.value == null){
+//            val a = Language("dnm", "叼你妈")
+//            val b = Language("nmd", "你妈的")
+//            insertData(a,b)
+//            allDataLive = dao?.fetchAllData()
+//        }
     }
 
     fun insertData(vararg language: Language){

@@ -38,6 +38,9 @@ class DataFragmentRecyclerAdapter: ListAdapter<Language, DataFragmentRecyclerAda
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.itemView.acTextView.text = getItem(position).acronym
         holder.itemView.meaningTextView.text = getItem(position).meaning
+        holder.itemView.copyButton.setOnClickListener {
+            //todo: add action
+        }
     }
 
 }

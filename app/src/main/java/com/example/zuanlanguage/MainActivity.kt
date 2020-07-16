@@ -21,4 +21,8 @@ class MainActivity : AppCompatActivity() {
         _appBarConfiguration = AppBarConfiguration.Builder(fragmentSet).build()
         NavigationUI.setupActionBarWithNavController(this, _navController, _appBarConfiguration)
     }
+
+    override fun onNavigateUp(): Boolean {
+        return super.onNavigateUp() || _navController.navigateUp()
+    }
 }

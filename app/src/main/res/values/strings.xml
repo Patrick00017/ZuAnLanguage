@@ -3,4 +3,6 @@
     <string name="GenarateFragment">GenarateFragment</string>
     <string name="DataFragment">DataFragment</string>
     <string name="MineFragment">MineFragment</string>
+    <string name="search">Search</string>
+    <string name="add">Add</string>
 </resources>
