@@ -7,7 +7,7 @@ import com.example.zuanlanguage.database.Language
 import com.example.zuanlanguage.database.LanguageDao
 import kotlinx.coroutines.launch
 
-class DataViewModel() : ViewModel() {
+class DataViewModel : ViewModel() {
     var dao: LanguageDao ?= null
     var allDataLive: LiveData<List<Language>> ?= null
 
