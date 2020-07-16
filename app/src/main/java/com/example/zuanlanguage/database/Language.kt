@@ -5,11 +5,27 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "Language")
-data class Language (
+class Language(acronym: String, meaning: String) {
+
     @PrimaryKey(autoGenerate = true)
-    val id: Int?,
+    var id: Int = 0
+    get() = field
+    set(value) {
+        field = value
+    }
+
     @ColumnInfo(name = "acronym")
-    val acronym: String,
+    var acronym: String = acronym
+        get() = field
+    set(value){
+        field = value
+    }
+
     @ColumnInfo(name = "meaning")
-    val meaning: String
-)
+    var meaning: String = meaning
+        get() = field
+        set(value){
+            field = value
+        }
+
+}
