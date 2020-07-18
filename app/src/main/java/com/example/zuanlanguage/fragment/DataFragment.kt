@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.zuanlanguage.viewModel.DataViewModel
 import com.example.zuanlanguage.R
 import com.example.zuanlanguage.adapter.DataFragmentRecyclerAdapter
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.data_fragment.*
 
 class DataFragment : Fragment() {
@@ -26,6 +27,8 @@ class DataFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         setHasOptionsMenu(true)
+        requireActivity().bottomNav.visibility = View.VISIBLE
+        requireActivity().cardView.visibility = View.VISIBLE
 
         return inflater.inflate(R.layout.data_fragment, container, false)
     }
@@ -86,6 +89,7 @@ class DataFragment : Fragment() {
         outState.putBoolean(LAUCHKEY, true)
         super.onSaveInstanceState(outState)
     }
+
 
 
 }

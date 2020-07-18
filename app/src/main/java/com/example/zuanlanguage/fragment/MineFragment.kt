@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.zuanlanguage.viewModel.MineViewModel
 import com.example.zuanlanguage.R
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MineFragment : Fragment() {
 
@@ -21,6 +22,8 @@ class MineFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        requireActivity().bottomNav.visibility = View.VISIBLE
+        requireActivity().cardView.visibility = View.VISIBLE
         return inflater.inflate(R.layout.mine_fragment, container, false)
     }
 

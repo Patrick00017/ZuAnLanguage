@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.zuanlanguage.viewModel.GenarateViewModel
 import com.example.zuanlanguage.R
+import kotlinx.android.synthetic.main.activity_main.*
 
 class GenarateFragment : Fragment() {
 
@@ -21,6 +22,8 @@ class GenarateFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        requireActivity().bottomNav.visibility = View.VISIBLE
+        requireActivity().cardView.visibility = View.VISIBLE
         return inflater.inflate(R.layout.genarate_fragment, container, false)
     }
 

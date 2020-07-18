@@ -1,5 +1,6 @@
 package com.example.zuanlanguage.fragment
 
+import android.opengl.Visibility
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -11,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.zuanlanguage.R
 import com.example.zuanlanguage.database.Language
 import com.example.zuanlanguage.viewModel.DataViewModel
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_add.*
 
 class AddFragment : Fragment() {
@@ -26,6 +28,9 @@ class AddFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+        requireActivity().bottomNav.visibility = View.INVISIBLE
+        requireActivity().cardView.visibility = View.INVISIBLE
+
         return inflater.inflate(R.layout.fragment_add, container, false)
     }
 
