@@ -8,6 +8,5 @@
     <string name="ac">ac</string>
     <string name="meaning">meaning</string>
     <string name="AddLabel">InsertZuAnLanguage</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="when_delete_word">Delete completed!</string>
 </resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">祖安语言生成器</string>
+    <string name="GenarateFragment">生成</string>
+    <string name="DataFragment">管理</string>
+    <string name="MineFragment">我的</string>
+    <string name="search">搜索</string>
+    <string name="add">添加</string>
+    <string name="ac">祖安语言缩写</string>
+    <string name="meaning">内在含义</string>
+    <string name="AddLabel">添加祖安语言</string>
+    <string name="when_delete_word">删除成功！</string>
+</resources>
