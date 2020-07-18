@@ -16,8 +16,8 @@
         android:label="data_fragment"
         tools:layout="@layout/data_fragment" >
         <action
-            android:id="@+id/action_DataFragment_to_addFragment"
-            app:destination="@id/addFragment" />
+            android:id="@+id/action_DataFragment_to_addFragment2"
+            app:destination="@id/addFragment2" />
     </fragment>
     <fragment
         android:id="@+id/MineFragment"
@@ -25,7 +25,7 @@
         android:label="mine_fragment"
         tools:layout="@layout/mine_fragment" />
     <fragment
-        android:id="@+id/addFragment"
+        android:id="@+id/addFragment2"
         android:name="com.example.zuanlanguage.fragment.AddFragment"
         android:label="add_fragment"
         tools:layout="@layout/add_fragment" />

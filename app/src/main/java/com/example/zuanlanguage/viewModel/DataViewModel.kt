@@ -1,24 +1,28 @@
 package com.example.zuanlanguage.viewModel
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.zuanlanguage.database.Language
 import com.example.zuanlanguage.database.LanguageDao
+import com.example.zuanlanguage.database.LanguageDatabase
 import kotlinx.coroutines.launch
 
-class DataViewModel : ViewModel() {
-    var dao: LanguageDao ?= null
+class DataViewModel(application: Application) : AndroidViewModel(application) {
+    //data
     var allDataLive: LiveData<List<Language>> ?= null
 
-    public fun fetchAllData(){
+    private var dao: LanguageDao ?= null
+    private var database: LanguageDatabase = LanguageDatabase.get(application)
+
+    init {
+        dao = database.languageDao()
+    }
+
+    fun fetchAllData(){
         allDataLive = dao?.fetchAllData()
-//        if(allDataLive?.value == null){
-//            val a = Language("dnm", "叼你妈")
-//            val b = Language("nmd", "你妈的")
-//            insertData(a,b)
-//            allDataLive = dao?.fetchAllData()
-//        }
     }
 
     fun insertData(vararg language: Language){
