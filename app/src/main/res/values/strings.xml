@@ -9,4 +9,7 @@
     <string name="meaning">meaning</string>
     <string name="AddLabel">InsertZuAnLanguage</string>
     <string name="when_delete_word">Delete completed!</string>
+    <string name="copy_successful">Copy successful!</string>
+    <string name="copy_fail">Copy fail!</string>
+    <string name="isLiked">isLiked</string>
 </resources>

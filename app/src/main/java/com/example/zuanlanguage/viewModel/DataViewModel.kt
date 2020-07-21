@@ -44,4 +44,10 @@ class DataViewModel(application: Application) : AndroidViewModel(application) {
             }
         }
     }
+
+    fun updateData(vararg data: Language){
+        viewModelScope.launch {
+            dao?.updateData(*data)
+        }
+    }
 }

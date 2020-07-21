@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.zuanlanguage.viewModel.MineViewModel
 import com.example.zuanlanguage.R
+import com.example.zuanlanguage.viewModel.DataViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MineFragment : Fragment() {
@@ -16,7 +17,7 @@ class MineFragment : Fragment() {
         fun newInstance() = MineFragment()
     }
 
-    private lateinit var viewModel: MineViewModel
+    private lateinit var viewModel: DataViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,8 +30,8 @@ class MineFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MineViewModel::class.java)
-        // TODO: Use the ViewModel
+        viewModel = DataViewModel(requireActivity().application)
+
     }
 
 }

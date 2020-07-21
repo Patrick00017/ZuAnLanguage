@@ -58,7 +58,7 @@ class AddFragment : Fragment() {
         editTextTextMeaning.addTextChangedListener(textWatcher)
 
         addLanguage.setOnClickListener{
-            val insert = Language(editTextTextAc.text.toString(), editTextTextMeaning.text.toString())
+            val insert = Language(editTextTextAc.text.toString(), editTextTextMeaning.text.toString(), isLikedButton.isChecked)
             _viewModel.insertData(insert)
             findNavController().navigateUp()
         }

@@ -7,9 +7,11 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "Language")
 data class Language(
     @ColumnInfo(name = "acronym")
-    val acronym: String,
+    var acronym: String,
     @ColumnInfo(name = "meaning")
-    val meaning: String){
+    var meaning: String,
+    @ColumnInfo(name = "isLiked")
+    var isLiked: Boolean){
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0
         get() = field
@@ -17,29 +19,3 @@ data class Language(
             field = value
         }
 }
-
-
-//class Language(acronym: String, meaning: String) {
-//
-//    @PrimaryKey(autoGenerate = true)
-//    var id: Int = 0
-//    get() = field
-//    set(value) {
-//        field = value
-//    }
-//
-//    @ColumnInfo(name = "acronym")
-//    var acronym: String = acronym
-//        get() = field
-//    set(value){
-//        field = value
-//    }
-//
-//    @ColumnInfo(name = "meaning")
-//    var meaning: String = meaning
-//        get() = field
-//        set(value){
-//            field = value
-//        }
-//}
-

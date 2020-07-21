@@ -51,7 +51,7 @@ class DataFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         _viewModel = DataViewModel(requireActivity().application)
-        _adapter = DataFragmentRecyclerAdapter()
+        _adapter = DataFragmentRecyclerAdapter(requireActivity().application)
         recyclerView.apply {
             layoutManager = LinearLayoutManager(
                 requireContext(),
