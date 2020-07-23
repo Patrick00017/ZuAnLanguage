@@ -14,6 +14,7 @@ import java.util.regex.Pattern
 class DataViewModel(application: Application) : AndroidViewModel(application) {
     //data
     var allDataLive: LiveData<List<Language>> ?= null
+    var genarateLiveData: LiveData<List<Language>> ?= null
 
     private var dao: LanguageDao ?= null
     private var database: LanguageDatabase = LanguageDatabase.get(application)
@@ -34,6 +35,10 @@ class DataViewModel(application: Application) : AndroidViewModel(application) {
 
     fun searchData(pattern: String): LiveData<List<Language>>? {
         return dao?.searchData("%${pattern}%")
+    }
+
+    fun genarateData(pattern: String){
+        genarateLiveData = dao?.searchData("%${pattern}%")
     }
 
     fun getMineData(): LiveData<List<Language>>? {

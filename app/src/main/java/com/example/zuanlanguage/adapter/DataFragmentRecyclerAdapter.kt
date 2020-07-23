@@ -58,7 +58,7 @@ class DataFragmentRecyclerAdapter(application: Application): ListAdapter<Languag
             val clipboardManager = parent.context.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
             val clipData = ClipData.newPlainText(CLIPDATA_LABEL, getItem(holder.adapterPosition).meaning)
             clipboardManager.setPrimaryClip(clipData)
-            Toast.makeText(parent.context, R.string.copy_successful, Toast.LENGTH_LONG).show()
+            Toast.makeText(parent.context, R.string.copy_successful, Toast.LENGTH_SHORT).show()
         }
         holder.itemView.like_button.setOnClickListener {
             val language = getItem(holder.adapterPosition)
@@ -66,10 +66,12 @@ class DataFragmentRecyclerAdapter(application: Application): ListAdapter<Languag
                 Picasso.get().load(R.drawable.like_unclick).into(it as ImageView)
                 language.isLiked = false
                 dataViewModel.updateData(language)
+                Toast.makeText(application, R.string.undoLike, Toast.LENGTH_SHORT).show()
             }else{
                 Picasso.get().load(R.drawable.like_clicked).into(it as ImageView)
                 language.isLiked = true
                 dataViewModel.updateData(language)
+                Toast.makeText(application, R.string.doLike, Toast.LENGTH_SHORT).show()
             }
         }
         return holder

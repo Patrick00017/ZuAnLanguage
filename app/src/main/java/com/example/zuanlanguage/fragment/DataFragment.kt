@@ -126,7 +126,4 @@ class DataFragment : Fragment() {
     }
 
 
-
-
-
 }

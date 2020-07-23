@@ -15,4 +15,7 @@
     <string name="genarate">Genarate</string>
     <string name="genarateFalse">No such data</string>
     <string name="loading">loading</string>
+    <string name="empty">empty</string>
+    <string name="doLike">Collecting done!</string>
+    <string name="undoLike">Unlike done.</string>
 </resources>
