@@ -20,4 +20,8 @@ interface LanguageDao {
 
     @Query("SELECT * FROM Language WHERE acronym like :pattern ORDER BY id DESC")
     fun searchData(pattern: String): LiveData<List<Language>>
+
+    @Query("SELECT * FROM Language WHERE isLiked == 1 ORDER BY id DESC")
+    fun getMineData(): LiveData<List<Language>>
+
 }

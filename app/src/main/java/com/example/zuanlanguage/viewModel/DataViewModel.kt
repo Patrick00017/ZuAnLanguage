@@ -36,6 +36,10 @@ class DataViewModel(application: Application) : AndroidViewModel(application) {
         return dao?.searchData("%${pattern}%")
     }
 
+    fun getMineData(): LiveData<List<Language>>? {
+        return dao?.getMineData()
+    }
+
     fun deleteData(position: Int){
         viewModelScope.launch {
             val language = allDataLive?.value?.get(position)

@@ -1,15 +1,20 @@
 package com.example.zuanlanguage.fragment
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.zuanlanguage.viewModel.MineViewModel
 import com.example.zuanlanguage.R
+import com.example.zuanlanguage.adapter.MineRecyclerAdapter
 import com.example.zuanlanguage.viewModel.DataViewModel
 import kotlinx.android.synthetic.main.activity_main.*
+import com.example.zuanlanguage.database.Language
+import kotlinx.android.synthetic.main.mine_fragment.*
 
 class MineFragment : Fragment() {
 
@@ -17,7 +22,9 @@ class MineFragment : Fragment() {
         fun newInstance() = MineFragment()
     }
 
-    private lateinit var viewModel: DataViewModel
+    private lateinit var dataViewModel: DataViewModel
+    private lateinit var _adapter: MineRecyclerAdapter
+    private lateinit var _mineLiveData: LiveData<List<Language>>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,8 +37,21 @@ class MineFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = DataViewModel(requireActivity().application)
-
+        dataViewModel = DataViewModel(requireActivity().application)
+        //todo: when getMineData return null
+        _adapter = MineRecyclerAdapter(requireActivity().application)
+        mineRecyclerView.apply {
+            layoutManager = LinearLayoutManager(
+                requireContext(),
+                LinearLayoutManager.VERTICAL,
+                false
+            )
+            adapter = _adapter
+        }
+        _mineLiveData = dataViewModel.getMineData()!!
+        _mineLiveData.observe(viewLifecycleOwner, Observer {
+            _adapter.submitList(it)
+        })
     }
 
 }

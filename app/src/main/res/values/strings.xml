@@ -12,4 +12,7 @@
     <string name="copy_successful">Copy successful!</string>
     <string name="copy_fail">Copy fail!</string>
     <string name="isLiked">isLiked</string>
+    <string name="genarate">Genarate</string>
+    <string name="genarateFalse">No such data</string>
+    <string name="loading">loading</string>
 </resources>
